@@ -116,7 +116,7 @@ origin    git@github.com:%ИМЯ_АККАУНТА%/%ИМЯ-ПРОЕКТА%.git (
 Чтобы отправить изменения с локального компьютера в сеть нужно сначала создать коммит, после чего его можно будет отправить командой:
 
 ```bash
-$ git push -u origin main
+$ git push -u origin master
 ```
 
 Если на **main** вылезает ошибка, попробуйте указать вместо него **master**. При дальнейших отправках изменений флаг "-u" не нужно добавлять.
@@ -139,7 +139,7 @@ HEAD - это файл в репозитории, отсылающий на по
 ## Статусы файлов, отображаемые по команде git status
 
 ```mermaid
-graph LR;
+graph TD;
   untracked (новый файл) -- "git add" --> staged + tracked;
   staged + tracked -- "git commit" --> tracked/comitted;
   tracked/comitted -- "изменения" --> modified;
