@@ -133,3 +133,16 @@ $ git log
 ```bash
 $ git log --oneline
 ```
+
+HEAD - это файл в репозитории, отсылающий на последний хэш (коммит). Файл лежит в папке .git.
+
+## Статусы файлов, отображаемые по команде git status
+
+```mermaid
+graph LR;
+  untracked (новый файл) -- "git add" --> staged + tracked;
+  staged + tracked -- "git commit" --> tracked/comitted;
+  tracked/comitted -- "изменения" --> modified;
+  modified -- "git add" --> staged + tracked;
+
+``` 
