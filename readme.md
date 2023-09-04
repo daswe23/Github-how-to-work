@@ -139,10 +139,10 @@ HEAD - это файл в репозитории, отсылающий на по
 ## Статусы файлов, отображаемые по команде git status
 
 ```mermaid
-graph TD;
-  untracked (новый файл) -- "git add" --> staged + tracked;
-  staged + tracked -- "git commit" --> tracked/comitted;
-  tracked/comitted -- "изменения" --> modified;
-  modified -- "git add" --> staged + tracked;
+flowchart TD;
+  A [untracked (новый файл)] -- git add --> B{staged + tracked};
+  B {staged + tracked} -- git commit --> C[tracked/comitted];
+  C [tracked/comitted] -- changes --> D [modified];
+  D [modified] -- git add --> B {staged + tracked};
 
 ``` 
